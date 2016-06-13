@@ -1,0 +1,17 @@
+<h1>Create Product:</h1>
+
+<input ng-model="prod.title" placeholder="Title" />
+<input ng-model="prod.color" placeholder="Color" />
+<button class="ui labeled icon button" ng-click="addProduct(prod)"><i class="plus icon"></i>Add Product</button>
+
+
+
+<ul ng-repeat="product in products">
+	<li ng-hide="edit">{{product.title}}</li>
+	<li ng-hide="edit">{{product.color}}</li>
+	<input ng-model="product.title" ng-show="edit">
+	<input ng-model="product.color" ng-show="edit">
+	<button ng-hide="edit" ng-click="edit = !edit">Edit</button>
+	<button ng-show="edit" ng-click="edit = !edit; editProduct(product)">Save</button>
+	<button ng-click="deleteProduct(product)">Delete</button>
+<ul>

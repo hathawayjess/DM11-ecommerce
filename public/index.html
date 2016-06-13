@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="ecommerce">
+
+  <head>
+      <title> E-Commerce </title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="./bower_components/semantic/dist/semantic.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+      <div class="main-container">
+              <div class="ui two item inverted menu">
+                  <a class="item" ui-sref="home"><h2>Home</h2></a>
+                  <a class="item" ui-sref="admin"><h2>Admin</h2></a>
+              </div>
+          <ui-view></ui-view>
+      </div>
+      <script src="./bower_components/angular/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+      <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="./bower_components/semantic/dist/semantic.min.js"></script>
+      <script src="./app.js"></script>
+      <script src="./services/productSvc.js"></script>
+      <script src="./controllers/adminCtrl.js"></script>
+      <script src="./controllers/homeCtrl.js"></script>
+  </body>
+
+</html>
